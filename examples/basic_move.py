@@ -26,8 +26,5 @@ joint_q = [-1.54, -1.83, -2.28, -0.59, 1.60, 0.023]
 # Move synchronously 
 rtde_control.moveJ(joint_q)
 
-# Decelerate the robot 
-rtde_control.speedStop()
-
 # Terminate the script
 rtde_control.stopScript()
