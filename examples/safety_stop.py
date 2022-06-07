@@ -1,5 +1,8 @@
 """
-Basic Move Program using the RTDEControlInterface
+Basic Move Program using the RTDEControlInterface 
+
+Uses ur_rtde library 
+
 """
 
 import rtde_control

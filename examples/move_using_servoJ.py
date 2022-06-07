@@ -1,5 +1,5 @@
 """
-Moving using ServoJ
+Moving using ServoJ with ur_rtde library
 
 """
 

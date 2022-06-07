@@ -1,3 +1,8 @@
+"""
+Uses offical UR RTDE Client 
+
+"""
+
 import rtde.rtde as rtde
 import rtde.rtde_config as rtde_config
 import time
@@ -21,6 +26,7 @@ con.send_output_setup(output_names, output_types)
 # start controller synchronization @ 125hz
 con.send_start()
 
+# fetch next data package from buffer
 while con.is_connected():
     print(con.receive().__dict__['timestamp'])
     time.sleep(1)
