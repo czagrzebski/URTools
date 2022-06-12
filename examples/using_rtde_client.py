@@ -21,12 +21,12 @@ con.connect()
 con.get_controller_version()
 
 # define output variables
-con.send_output_setup(output_names, output_types)
+con.send_output_setup(output_names, output_types, 125)
 
 # start controller synchronization @ 125hz
 con.send_start()
 
-# fetch next data package from buffer
+# fetch latest data package from buffer
 while con.is_connected():
-    print(con.receive().__dict__['timestamp'])
+    print(con.receive().__dict__['actual_q'])
     time.sleep(1)
