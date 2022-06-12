@@ -3,6 +3,7 @@ A basic command-line style interface for interacting with the
 UR Dashboard Server
 
 https://www.universal-robots.com/articles/ur/dashboard-server-e-series-port-29999/
+https://www.universal-robots.com/articles/ur/dashboard-server-cb-series-port-29999/
 
 """
 
@@ -25,10 +26,10 @@ while True:
     if command == "exit":
         sys.exit()
 
-    # Append newline to signal end of message
+    # Append newline to terminate command
     command += "\n"
 
-    # convert ascii to bytes
+    # convert ascii to bytes and send data
     s.send(command.encode())
     
     # receive bytes (max. 1024)
@@ -36,6 +37,8 @@ while True:
 
     if(data):
         print(data.decode())
+    else:
+        break
 
     
 
